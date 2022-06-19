@@ -12,6 +12,6 @@ public class Main {
         flights[0] = boing;
         flights[1] = tu154;
         System.out.println(Arrays.toString(flights));
-        
+
     }
 }
