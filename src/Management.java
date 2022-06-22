@@ -1,7 +1,7 @@
+import java.util.ArrayList;
+
 public interface Management {
-    Flight flight();
-
-    Flight allFlight();
-
+    ArrayList<Flight> flights();
+    String[] allFlight();
     String type();
 }

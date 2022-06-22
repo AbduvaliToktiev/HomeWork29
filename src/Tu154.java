@@ -16,4 +16,11 @@ public class Tu154 extends Flight{
                 " Model = " + model +
                 " Type = " + type;
     }
+
+    void inclementI(int id) {
+        for (int i = 0; i < id; i++) {
+            System.out.println(id);
+            id++;
+        }
+    }
 }

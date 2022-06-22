@@ -1,22 +1,33 @@
-public class AirportManagement implements Management{
-    Flight[] flights = new Flight[2];
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
-    public void Flight(Flight... flights) {
+public class AirportManagement implements Management {
+    ArrayList<Flight> flights = new ArrayList<>();
+    Tu154 tu154 = new Tu154(1, "Tu154", "Military");
+    Boing boing = new Boing(2, "Boing", "Passenger");
 
+    public ArrayList<Flight> flights() {
+        flights.add(tu154);
+        flights.add(boing);
+        System.out.println(flights);
+        return flights;
     }
 
-    @Override
-    public Flight flight() {
-        return null;
-    }
 
     @Override
-    public Flight allFlight() {
-        return null;
+    public String[] allFlight() {
+        String[] reis = new String[4];
+        reis[0] = "Бишкек - Москва";
+        reis[1] = "Москва - Турция";
+        reis[2] = "Нур-Султан - Ташкент";
+        reis[3] = "Ташкент - Нью-Йорк";
+        System.out.println(Arrays.toString(reis));
+        return reis;
     }
 
     @Override
     public String type() {
-        return null;
+       return null;
     }
 }
