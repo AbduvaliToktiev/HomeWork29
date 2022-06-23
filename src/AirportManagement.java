@@ -28,6 +28,25 @@ public class AirportManagement implements Management {
 
     @Override
     public String type() {
-       return null;
+        String[] reis = new String[4];
+        reis[0] = "Бишкек - Москва";
+        reis[1] = "Москва - Турция";
+        reis[2] = "Нур-Султан - Ташкент";
+        reis[3] = "Ташкент - Нью-Йорк";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Список рейсов:");
+        allFlight();
+        System.out.println("Введите тип самолёта: " + boing.type + ", " + tu154.type);
+        String search = sc.nextLine();
+        switch (search) {
+            case "Passenger":
+                System.out.println(reis[0] + ", " + reis[2]);
+                break;
+            case "Military":
+                System.out.println(reis[1] + ", " + reis[3]);
+                break;
+            default:
+        }
+        return null;
     }
 }
